@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SANGAMESH GULLE — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0f1724; /* dark */
+      --bg2:#08122a;
+      --accent:#8E2DE2; /* purple */
+      --muted:#94a3b8;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: #e6eef8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));-webkit-font-smoothing:antialiased;}
+    .container{max-width:var(--maxw);margin:48px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;flex:0 0 120px;background:linear-gradient(135deg,var(--accent),#00c6ff);display:grid;place-items:center;font-weight:800;color:white;font-size:28px}
+    .hero h1{margin:0;font-size:clamp(24px,4vw,40px);}
+    .hero p{color:var(--muted);margin:8px 0 0}
+    .buttons{margin-top:12px;display:flex;gap:12px}
+    .btn{background:var(--accent);border:none;padding:10px 14px;border-radius:10px;color:white;font-weight:600;text-decoration:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    main{display:grid;grid-template-columns:1fr 340px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .project{padding:12px;border-radius:10px;background:var(--glass);}
+    .project h4{margin:0 0 6px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    aside .section{margin-bottom:16px}
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:900px){main{grid-template-columns:1fr} .projects{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ========== HEADER / HERO ========== -->
+    <header>
+      <div class="avatar">SG</div>
+      <div class="hero">
+        <h1><!-- EDIT: YOUR NAME -->
+          SANGAMESH GULLE <span style="color:var(--accent);font-weight:700">— Python Full Stack</span>
+        </h1>
+        <p><!-- EDIT: SHORT BIO (1-2 lines) -->
+          I build scalable web apps and AI-powered solutions. Currently focused on full-stack Python, machine learning, and deployment.
+        </p>
+        <div class="buttons">
+          <!-- EDIT: replace hrefs with your resume/github/linkedin -->
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn ghost" href="mailto:ghullesangamesh@gmail.com">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========== LEFT: Projects & Experience ========== -->
+      <section>
+        <div class="card">
+          <h3 style="margin-top:0">Highlighted Projects</h3>
+          <div class="projects" id="projects">
+            <!-- Repeat project block for each project. Edit titles, descriptions, links. -->
+            <article class="project">
+              <h4>Sentiment Analysis (IMDB)</h4>
+              <p style="margin:6px 0;color:var(--muted);font-size:14px">Preprocessed 50k+ reviews, TF-IDF, Naive Bayes — ~89% accuracy. Visualized metrics.</p>
+              <p style="margin:6px 0;font-size:13px"><strong>Tech:</strong> Python, scikit-learn, pandas</p>
+            </article>
+
+            <article class="project">
+              <h4>EduBOT — E-learning & Chatbot</h4>
+              <p style="margin:6px 0;color:var(--muted);font-size:14px">Django platform with REST APIs, chatbot integration and analytics dashboard.</p>
+              <p style="margin:6px 0;font-size:13px"><strong>Tech:</strong> Django, MySQL, JS</p>
+            </article>
+
+            <!-- Add more projects here -->
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin-top:0">Experience & Education</h3>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <strong>Malla Reddy College of Engineering</strong>
+              <div style="color:var(--muted);font-size:13px">B.Tech — Data Science | 2025 - Present</div>
+            </div>
+            <div>
+              <strong>Sri Vidhya Junior College</strong>
+              <div style="color:var(--muted);font-size:13px">Maths, Physics, Chemistry | 2021 - 2023</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin-top:0">Open-source & Hackathons</h3>
+          <ul style="margin:8px 0 0;color:var(--muted);padding-left:18px">
+            <li>Swecha Telangana Hackathon — AI Hack Day</li>
+            <li>3rd place — HackoHeist</li>
+            <li>Won — Hack-N-Win (Django site)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== RIGHT: Sidebar ========== -->
+      <aside>
+        <div class="card section">
+          <h4 style="margin:0 0 8px">Contact</h4>
+          <div style="color:var(--muted);font-size:14px">Phone: +917569543565</div>
+          <div style="color:var(--muted);font-size:14px">Email: ghullesangamesh@gmail.com</div>
+          <div style="margin-top:8px">
+            <a class="btn" href="https://github.com/sangamesh-g" target="_blank">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/g-sangamesh" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h4 style="margin:0 0 8px">Skills</h4>
+          <div class="skills">
+            <!-- Edit skills -->
+            <span class="skill">Python</span>
+            <span class="skill">Django</span>
+            <span class="skill">DRF</span>
+            <span class="skill">scikit-learn</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">React (basic)</span>
+            <span class="skill">Docker</span>
+            <span class="skill">SQL</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h4 style="margin:0 0 8px">Tech Summary</h4>
+          <p style="color:var(--muted);font-size:14px;margin:0">Python, ML, Web APIs, Model deployment, Git & CI/CD</p>
+        </div>
+
+        <div class="card section">
+          <h4 style="margin:0 0 8px">Resume Snapshot</h4>
+          <p style="color:var(--muted);font-size:13px;margin:0">GPA: 7.56 — Relevant coursework: ML, DBMS, OOP</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ • Edit this file to personalize — replace names, links, and project content.
+    </footer>
+  </div>
+</body>
+</html>
