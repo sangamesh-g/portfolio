@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg1:#ff9a9e;
-      --bg2:#fad0c4;
-      --accent:#fbc2eb;
-      --accent2:#a6c1ee;
-      --text:#1f1f1f;
-      --muted:#6b7280;
-      --card:rgba(255,255,255,0.6);
-      --glass: rgba(255,255,255,0.4);
+      --bg1:#ffffff;
+      --bg2:#f9fafc;
+      --accent:#2563eb;
+      --accent2:#3b82f6;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --glass: #f1f5f9;
       --maxw:1100px;
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
       color: var(--text);
@@ -30,14 +30,14 @@
     .hero p{color:var(--muted);margin:8px 0 0}
     .buttons{margin-top:12px;display:flex;gap:12px}
     .btn{background:var(--accent);border:none;padding:10px 14px;border-radius:10px;color:white;font-weight:600;text-decoration:none}
-    .btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.15);color:var(--muted)}
+    .btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.1);color:var(--muted)}
     main{display:grid;grid-template-columns:1fr 340px;gap:28px;margin-top:28px}
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.15);backdrop-filter:blur(10px)}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.05)}
     .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
     .project{padding:12px;border-radius:10px;background:var(--glass);}
     .project h4{margin:0 0 6px}
     .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:rgba(255,255,255,0.7);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--text)}
+    .skill{background:#f1f5f9;padding:8px 10px;border-radius:999px;font-size:13px;color:var(--text)}
     aside .section{margin-bottom:16px}
     footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
     @media (max-width:900px){main{grid-template-columns:1fr} .projects{grid-template-columns:1fr}}
